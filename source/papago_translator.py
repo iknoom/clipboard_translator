@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QSlider, QGraphic
 from PyQt5.QtCore import Qt, QRect
 from PyQt5.QtGui import QColor, QPainter
 
+
 class App(QMainWindow):
 
     def __init__(self):
@@ -30,7 +31,7 @@ class App(QMainWindow):
         self.set_opacity_slider()
         self.set_text_size_slider()
         self.set_label()
-        self.set_thread()
+        self.initialize_thread()
         self.show()
 
     def set_opacity_slider(self):
@@ -62,7 +63,7 @@ class App(QMainWindow):
         font_effect.setColor(QColor(255, 255, 255))
         self.label.setGraphicsEffect(font_effect)
 
-    def set_thread(self):
+    def initialize_thread(self):
         self.th = Thread()
         self.th.threadEvent.connect(self.refresh)
         self.th.start()
