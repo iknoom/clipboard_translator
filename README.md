@@ -33,6 +33,7 @@ python3 source/papago_translator.py
 
 ![image](https://user-images.githubusercontent.com/48780754/96372033-e8509700-119f-11eb-96a1-efacde55a2bb.png)
 
+
 실행 후 번역할 문장을 [Ctrl + C]로 복사하면 번역 앱에 번역됩니다.
 
 ## 기타
