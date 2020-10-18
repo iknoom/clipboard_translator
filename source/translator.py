@@ -1,15 +1,26 @@
-import pyperclip, requests
+# -*- coding: euc-kr -*-
+import pyperclip, requests, json, os
+from os.path import dirname
 from PyQt5.QtCore import QThread, pyqtSignal
 
 class Thread(QThread):
     threadEvent = pyqtSignal(int)
     def __init__(self):
         super().__init__()
+        self.is_id_initialied = False
         self.update_flag = False
         self.source = ""
         self.lang = "en"
-        self.papago_id = ""
-        self.papago_secret = ""
+        try:
+            with open(f'{dirname(__file__)}/../config.json', "r") as cf:
+                configs = json.load(cf)
+                self.papago_id = configs['papago_id']
+                self.papago_secret = configs['papago_secret']
+                self.is_id_initialied = True
+        except KeyError:
+            raise Exception('papago_id or papago_secret is empty')
+        except:
+            raise Exception("Failed to read '../config.json'.")
 
     def run(self):
         while True:
@@ -37,7 +48,7 @@ class Thread(QThread):
             res = response.json()
             return res['message']['result']['translatedText']
         except:
-            return "[Translator] ì—ëŸ¬ì…ë‹ˆë‹¤."
+            return f"[Translator] ¿¡·¯ÀÔ´Ï´Ù.\n{response.text}"
 
     def is_updated(self):
         return self.update_flag
