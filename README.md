@@ -1,4 +1,4 @@
-# clipboard_tranlator
+# clipboard_translator
  파파고 api를 활용한 반투명 클립보드 번역 앱
 
 ## 사용 방법
@@ -16,7 +16,7 @@ self.papago_id = "클라이언트 아이디"
 self.papago_secret = "클라이언트 시크릿"
 ```
 
-![](https://github.com/iknoom/clipboard_tranlater/blob/master/image/translate_example.PNG)
+![image](https://user-images.githubusercontent.com/48780754/96372033-e8509700-119f-11eb-96a1-efacde55a2bb.png)
 
 실행 후 번역할 문장을 [Ctrl + C]로 복사하면 번역 앱에 번역됩니다.
 
