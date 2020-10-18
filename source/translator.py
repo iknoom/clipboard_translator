@@ -48,7 +48,7 @@ class Thread(QThread):
             res = response.json()
             return res['message']['result']['translatedText']
         except:
-            return f"[Translator] ¿¡·¯ÀÔ´Ï´Ù.\n{response.text}"
+            return f"[Translator] ì—ëŸ¬ì…ë‹ˆë‹¤.\n{response.text}"
 
     def is_updated(self):
         return self.update_flag
