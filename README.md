@@ -16,7 +16,7 @@ self.papago_id = "클라이언트 아이디"
 self.papago_secret = "클라이언트 시크릿"
 ```
 
-![](https://github.com/iknoom/clipboard_translater/blob/master/image/translate_example.PNG)
+![](https://github.com/iknoom/clipboard_translator/blob/master/image/translate_example.PNG)
 
 실행 후 번역할 문장을 [Ctrl + C]로 복사하면 번역 앱에 번역됩니다.
 
