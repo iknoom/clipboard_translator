@@ -19,6 +19,18 @@ API 레퍼런스 설명과 같이 API를 사용하려면 클라이언트 아이�
 }
 ```
 
+실행에 필요한 의존성 라이브러리들을 설치합니다.
+```
+pip3 install PyQt5 pyperclip
+```
+
+source/papago_translator.py 를 실행합니다.
+```
+python3 source/papago_translator.py
+```
+
+## 실행 예시
+
 ![image](https://user-images.githubusercontent.com/48780754/96372033-e8509700-119f-11eb-96a1-efacde55a2bb.png)
 
 실행 후 번역할 문장을 [Ctrl + C]로 복사하면 번역 앱에 번역됩니다.
